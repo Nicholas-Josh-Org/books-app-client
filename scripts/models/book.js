@@ -29,17 +29,16 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.fetchAll = callback =>
     $.get(`${ENV.apiUrl}/api/v1/books`)
-      .then(Book.loadAll)
+      .then(Book.loadAll).then(console.log('fetchAll'))
       .then(callback)
       .catch(errorCallback);
 
-  // Book.loadOne = 
 
-  Book.loadOne = rows => Book.all = rows.sort((a, b) => a.title - b.title).map(book => new Book(book));
+  Book.loadOne = rows => Book.description = rows.map(book => new Book(book));
 
   Book.fetchOne = callback =>
-    $.get(`${ENV.apiUrl}/api/v1/books/:book_id`)
-      .then(Book.loadOne).then(console.log('stufff'))
+    $.get(`${ENV.apiUrl}/api/v1/books/:id`)
+      .then(Book.loadOne).then(console.log('fetchOne'))
       .then(callback)
       .catch(errorCallback);
 
