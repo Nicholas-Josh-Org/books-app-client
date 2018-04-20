@@ -30,12 +30,14 @@
   </script>
   <script type="text/x-handlebars-template" id="detail-template">
     <li class="book-items-detail" data-bookid={{book_id}}>
+       
       <div class="book-container">
+          <p>{{description}}</p>
         <img src={{image_url}}>
         <div class="book-overlay">
           <a href="books/{{book_id}}">{{title}}</a>
           <p>{{author}}</p>
-          <p>{{description}}</p>
+          
         </div>
       </div>
     </li>
