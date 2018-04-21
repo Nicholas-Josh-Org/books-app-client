@@ -14,7 +14,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
     console.error(err);
     module.errorView.initErrorPage(err);
   }
-  
+
   function Book(rawBookObj) {
     Object.keys(rawBookObj).forEach(key => this[key] = rawBookObj[key]);
   }
@@ -39,6 +39,9 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
       .then(callback)
       .catch(errorCallback);
 
+  Book.create = book =>
+    $.post(`${ENV.apiUrl}/api/v1/books`, book)
+      .catch(err => console.error(err));
 
   module.Book = Book;
 })(app);

@@ -44,6 +44,10 @@
     </li>
   </script>
 </head>
+
+
+
+
 <body>
   <header>
     <div class="header-content">
@@ -66,7 +70,16 @@
     </section>
 
     <section class="detail-view">
-      
+      </section>
+
+      <section class="book-create">
+        <form>
+          <input type="text" name="author" id="book-create-author" required placeholder="Enter Author">
+          <input type="text" name="title" id="book-create-title"  required placeholder="Enter Title">
+          <input type="text" name="isbn" id="book-create-isbn"  required placeholder="Enter ISBN #">
+
+          <button>Create Book</button>
+        </form>
       </section>
 
   </main>
@@ -90,5 +103,6 @@
   <script src="./scripts/views/error-view.js" type="text/javascript"></script>
   <script src="./scripts/views/oneView.js" type="text/javascript"></script>
   <script src="./scripts/views/routes.js" type="text/javascript"></script>
+  <script src="./scripts/views/create.js" type="text/javascript"></script>
 </body>
 </html>
