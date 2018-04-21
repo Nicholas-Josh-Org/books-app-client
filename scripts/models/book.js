@@ -29,14 +29,16 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.fetchAll = callback => {
     $.get(`${ENV.apiUrl}/api/v1/books`)
-      .then(Book.loadAll).then(console.log('fetchAll'))
+      .then(Book.loadAll)
+      .then(console.log('fetchAll'))
       .then(callback)
       .catch(errorCallback);
   };
 
   Book.fetchOne = callback => {
     $.get(`${ENV.apiUrl}/api/v1/books/${callback}`)
-      .then(app.oneView.render).then(console.log('fetchOne'))
+      .then(app.oneView.render)
+      .then(console.log('fetchOne'))
       .then(callback)
       .catch(errorCallback);
   };  
