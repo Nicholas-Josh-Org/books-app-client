@@ -1,25 +1,25 @@
-'use strict';
-var app = app || {};
+// 'use strict';
+// var app = app || {};
 
-(module => {
+// (module => {
 
-  const createBook = {};
+//   const createBook = {};
 
-  createBook.init = () => {
-    $('.book-create').off().on('submit', 'form', () => {
-      // event.preventDefault();
-      const author = $('#book-create-author').val('');
-      const title = $('#book-create-title').val('');
-      const isbn = $('#book-create-isbg').val('');
-      app.Book.create({author},{title},{isbn});
-      // $('#book-create-author').val('');
-      // $('#book-create-title').val('');
-      console.log('posted');
-    });
-    console.log('posted?');
-    // $('.book-create').show();
-  };
+//   app.Book.prototype.init = () => {
+//     $('.book-create').off().on('submit', 'form', (event) => {
+//       event.preventDefault();
+//       const author = $('#book-create-author').val('');
+//       const title = $('#book-create-title').val('');
+//       const isbn = $('#book-create-isbn').val('');
+//       app.Book.create({author},{title},{isbn});
+//       // $('#book-create-author').val('');
+//       // $('#book-create-title').val('');
+//       console.log('posted');
+//     });
+//     console.log('posted?');
+//     // $('.book-create').show();
+//   };
 
-  module.createBook = createBook;
+//   module.createBook = createBook;
 
-})(app);
+// })(app);
