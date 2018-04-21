@@ -33,11 +33,6 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
       .then(callback)
       .catch(errorCallback);
 
-
-  // Book.loadOne = rows => Book.book_id = rows.map(book => new Book(book));
-
-
-
   Book.fetchOne = callback =>
     $.get(`${ENV.apiUrl}/api/v1/books/${callback}`)
       .then(app.oneView.render).then(console.log('fetchOne'))
