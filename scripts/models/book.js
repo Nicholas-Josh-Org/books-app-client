@@ -53,7 +53,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
     })
       .then().then(console.log())
       .catch(err => console.error(err));
-  }
+  };
 
   $('.book-create').on('submit', 'form', (event) => {
     event.preventDefault();
@@ -64,6 +64,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
       url : $('#book-create-url').val(),
       description : $('#book-create-description').val()
     });
+
     console.log(book);
     book.create();
     $('#book-create-author').val('');

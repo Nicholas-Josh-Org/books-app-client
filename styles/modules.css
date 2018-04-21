@@ -7,6 +7,11 @@
   margin: 0 auto;
 }
 
+.book-view {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
 .book-container {
   width: 50%;
   margin: 0 auto;
