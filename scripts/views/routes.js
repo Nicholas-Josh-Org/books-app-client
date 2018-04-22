@@ -1,6 +1,6 @@
 'use strict';
 
-page('/', app.bookView.initIndexPage);
+
 
 // if(window.location.protocol.startsWith('https:')) {
 //   page.base('/book-list-client');
@@ -12,6 +12,7 @@ page('/books/*', (ctx, next) => {
   next();
 });
 
+page('/', app.bookView.initIndexPage);
 page('/books/:id', ctx => app.Book.fetchOne(ctx.params.id));
 
 page.start();
